@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a8e4a462662564e48931da8e2a390e60
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 222398
+  packageName: 'Aika: Sailor Uniform'
+  packageVersion: 1.0.0
+  assetPath: Assets/Novacorp Studios/Shaders/VRMShaders/VRM10/MToon10/Tests/VRMShaders.VRM10.MToon10.Tests.asmdef
+  uploadId: 502139

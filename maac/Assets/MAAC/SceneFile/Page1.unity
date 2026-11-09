@@ -34374,6 +34374,99 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 467192, guid: 52e3c281ef0f0ea4985188d26644edcb, type: 3}
   m_PrefabInstance: {fileID: 1367925341}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1376409606
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1071801538914716438, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f9c8aed28312847c4b4354c4b8cd7176, type: 2}
+    - target: {fileID: 1071801538914716438, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b62d63b972ce342c1896d696e191f40f, type: 2}
+    - target: {fileID: 1071801538914716438, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 89f5ebfcfad5d4b23829380dc2b11f4d, type: 2}
+    - target: {fileID: 1071801538914716438, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 069879e70abb84d7a8dfd30039c241b6, type: 2}
+    - target: {fileID: 1071801538914716438, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 056050e0b69094ce595053f24571eb32, type: 2}
+    - target: {fileID: 1071801538914716438, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: 'm_Materials.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a70b29ce166154fdd90a1c40107cc843, type: 2}
+    - target: {fileID: 1071801538914716438, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: 'm_Materials.Array.data[6]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 19235f9d736e645458ea6ebd8e2cfabe, type: 2}
+    - target: {fileID: 1071801538914716438, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: 'm_Materials.Array.data[7]'
+      value: 
+      objectReference: {fileID: 2100000, guid: da53e207fbc4c494f8c3186dfa2647d3, type: 2}
+    - target: {fileID: 1071801538914716438, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: 'm_Materials.Array.data[8]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85d4420defbb5490db88afd40e19d3c7, type: 2}
+    - target: {fileID: 1494943704304151317, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: m_Name
+      value: Aika Sailor Uniform
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302689388623114671, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.123146
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302689388623114671, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.09000033
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302689388623114671, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 72.11956
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302689388623114671, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7847478
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302689388623114671, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302689388623114671, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6198153
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302689388623114671, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302689388623114671, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302689388623114671, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 76.605
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302689388623114671, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
 --- !u!1001 &1384372472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50348,6 +50441,7 @@ GameObject:
   - component: {fileID: 2063592363}
   - component: {fileID: 2063592362}
   - component: {fileID: 2063592361}
+  - component: {fileID: 2063592364}
   m_Layer: 5
   m_Name: Panel_3
   m_TagString: Untagged
@@ -50410,6 +50504,7 @@ MonoBehaviour:
   _disactivateObject: {fileID: 762207412}
   _onActivatePanelTasks:
   - {fileID: 2063592361}
+  - {fileID: 2063592364}
   _proceedConditions:
   - {fileID: 2063592358}
   - {fileID: 2063592356}
@@ -50513,8 +50608,7 @@ MonoBehaviour:
   _legacyText: {fileID: 318465739}
   _hideBalloonUntilActivated: 1
   _messages:
-  - "\u3042\u308C\u2026\u2026\uFF1F"
-  - "\u4F53\u304C\n\u52DD\u624B\u306B\u52D5\u304F\u2026\u2026\uFF01"
+  - "\u6B21\u306E\u89D2\u3092\u53F3\u306B\u66F2\u304C\u3063\u3066"
   _charactersPerSecond: 20
   _punctuationWait: 0.15
   _punctuationCharacters: "\u3001\u3002\uFF0C\uFF0E\uFF01\uFF1F!?\u2026"
@@ -50524,6 +50618,45 @@ MonoBehaviour:
   _waitAdvanceAfterLastMessage: 0
   _advanceActionName: UI/Submit
   _allowSkip: 1
+--- !u!114 &2063592364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063592354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2034e005e3b3f4b9ea02fe229c008a9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotatePlayerTask
+  _target: {fileID: 558285735}
+  _angle: 90
+  _duration: 0.4
+  _curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &2067284802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51941,4 +52074,5 @@ SceneRoots:
   - {fileID: 236034545}
   - {fileID: 1622966305}
   - {fileID: 558285725}
+  - {fileID: 1376409606}
   - {fileID: 241254428}

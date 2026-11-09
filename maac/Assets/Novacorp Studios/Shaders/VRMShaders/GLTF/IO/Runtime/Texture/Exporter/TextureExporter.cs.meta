@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 65fdfff6cc4b1e14a882259e903fc830
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 222398
+  packageName: 'Aika: Sailor Uniform'
+  packageVersion: 1.0.0
+  assetPath: Assets/Novacorp Studios/Shaders/VRMShaders/GLTF/IO/Runtime/Texture/Exporter/TextureExporter.cs
+  uploadId: 502139

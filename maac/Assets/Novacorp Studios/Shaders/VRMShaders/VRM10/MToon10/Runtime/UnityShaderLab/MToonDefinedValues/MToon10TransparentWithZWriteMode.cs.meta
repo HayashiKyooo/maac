@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: d5df515a36d3460891b348872459476f
+timeCreated: 1622456521
+AssetOrigin:
+  serializedVersion: 1
+  productId: 222398
+  packageName: 'Aika: Sailor Uniform'
+  packageVersion: 1.0.0
+  assetPath: Assets/Novacorp Studios/Shaders/VRMShaders/VRM10/MToon10/Runtime/UnityShaderLab/MToonDefinedValues/MToon10TransparentWithZWriteMode.cs
+  uploadId: 502139

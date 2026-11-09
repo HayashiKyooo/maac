@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8b731264e8acd0f4b8f56986e5eb2531
+timeCreated: 1521569785
+licenseType: Store
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 222398
+  packageName: 'Aika: Sailor Uniform'
+  packageVersion: 1.0.0
+  assetPath: Assets/Novacorp Studios/Shaders/VRMShaders/VRM/MToon/MToon/Samples/OutlineWidthModes.unity
+  uploadId: 502139

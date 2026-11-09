@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 98670a2a3852f3f40a7f9cbd5791e506
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 222398
+  packageName: 'Aika: Sailor Uniform'
+  packageVersion: 1.0.0
+  assetPath: Assets/Novacorp Studios/Shaders/VRMShaders/GLTF/IO/Tests/MetallicRoughnessConverterTests.cs
+  uploadId: 502139

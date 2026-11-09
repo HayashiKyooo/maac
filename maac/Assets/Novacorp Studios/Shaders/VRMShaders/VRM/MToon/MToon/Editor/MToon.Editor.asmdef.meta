@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: dddf8398e965f254cae2d7519d7f67d2
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 222398
+  packageName: 'Aika: Sailor Uniform'
+  packageVersion: 1.0.0
+  assetPath: Assets/Novacorp Studios/Shaders/VRMShaders/VRM/MToon/MToon/Editor/MToon.Editor.asmdef
+  uploadId: 502139

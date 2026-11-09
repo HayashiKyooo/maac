@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 9639e17dffc656345a70282f7f216672
+timeCreated: 1520007037
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 222398
+  packageName: 'Aika: Sailor Uniform'
+  packageVersion: 1.0.0
+  assetPath: Assets/Novacorp Studios/Shaders/VRMShaders/VRM/MToon/MToon/Samples/Materials/Toon.mat
+  uploadId: 502139

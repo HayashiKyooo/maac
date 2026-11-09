@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 60c8346e00a8ddd4cafc5a02eceeec57
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 222398
+  packageName: 'Aika: Sailor Uniform'
+  packageVersion: 1.0.0
+  assetPath: Assets/Novacorp Studios/Shaders/VRMShaders/GLTF/UniUnlit/Runtime/VRMShaders.GLTF.UniUnlit.Runtime.asmdef
+  uploadId: 502139

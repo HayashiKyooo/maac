@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fa5d94522a5d93442a7515698d7ab799
+timeCreated: 1533558728
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 222398
+  packageName: 'Aika: Sailor Uniform'
+  packageVersion: 1.0.0
+  assetPath: Assets/Novacorp Studios/Shaders/VRMShaders/GLTF/IO/Resources/UniGLTF/StandardMapImporter.shader
+  uploadId: 502139
