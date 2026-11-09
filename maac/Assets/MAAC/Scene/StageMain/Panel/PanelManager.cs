@@ -51,6 +51,11 @@ public class PanelManager : MonoBehaviour
                 var panel = _panelViews[i];
                 if (panel == null) continue;
 
+                // 前のコマは無効になる
+                var previous = CurrentPanel;
+                if (previous != null)
+                    previous.Deactivate();
+
                 CurrentIndex = i;
                 PanelActivated?.Invoke(i, panel);
 

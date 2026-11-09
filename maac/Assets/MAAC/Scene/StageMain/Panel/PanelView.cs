@@ -19,6 +19,9 @@ public class PanelView : MonoBehaviour
         Any,
     }
 
+    [Tooltip("コマが有効でない間に表示するオブジェクト（有効な間は非表示）")]
+    [SerializeField] private GameObject _disactivateObject;
+
     [SerializeField] private OnActivatePanelTaskBase[] _onActivatePanelTasks;
 
     [Header("次のコマへ進む条件")]
@@ -43,6 +46,11 @@ public class PanelView : MonoBehaviour
     /// <summary>次のコマへ進んでよくなった時に完了する（何度でも await 可）</summary>
     public UniTask CanProceedTask => _proceedCompletion.Task;
 
+    private void Awake()
+    {
+        SetDisactivateVisible(true);
+    }
+
     /// <summary>
     /// コマをアクティブにする。演出を順番に再生し、全て終わったら完了する。
     /// 進行条件の評価もここで開始される。
@@ -56,6 +64,7 @@ public class PanelView : MonoBehaviour
             return;
         }
         IsActivated = true;
+        SetDisactivateVisible(false);
 
         var token = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, destroyCancellationToken).Token;
 
@@ -96,8 +105,24 @@ public class PanelView : MonoBehaviour
     /// <summary>条件に関係なく、強制的に進行可能にする（デバッグやスキップ用）</summary>
     public void ForceProceed()
     {
+        if (CanProceed) return;
         CanProceed = true;
         _proceedCompletion.TrySetResult();
+    }
+
+    /// <summary>
+    /// 現在のコマでなくなった（次のコマへ移った）時に呼ぶ。Disactivate を再表示する。
+    /// 演出や進行状態はそのまま（再度 OnActivateAsync は呼べない）。
+    /// </summary>
+    public void Deactivate()
+    {
+        SetDisactivateVisible(true);
+    }
+
+    private void SetDisactivateVisible(bool visible)
+    {
+        if (_disactivateObject != null && _disactivateObject.activeSelf != visible)
+            _disactivateObject.SetActive(visible);
     }
 
     private async UniTaskVoid WatchProceedConditionsAsync(CancellationToken token)
