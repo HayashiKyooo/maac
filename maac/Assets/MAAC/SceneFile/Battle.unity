@@ -2902,9 +2902,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6988042c39283497d8532dd13dafd5ec, type: 3}
     m_FontSize: 140
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 140
@@ -12876,7 +12876,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: f87fc6ae60150463999bedb84db86484, type: 3}
     m_FontSize: 23
     m_FontStyle: 0
     m_BestFit: 0
@@ -20321,9 +20321,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6988042c39283497d8532dd13dafd5ec, type: 3}
     m_FontSize: 34
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -28599,9 +28599,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6988042c39283497d8532dd13dafd5ec, type: 3}
     m_FontSize: 34
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -31349,7 +31349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BattleHitEffect
   _container: {fileID: 546401894}
   _camera: {fileID: 330585545}
-  _font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  _font: {fileID: 12800000, guid: 6988042c39283497d8532dd13dafd5ec, type: 3}
   _fontSize: 64
   _popDuration: 0.08
   _holdDuration: 0.18

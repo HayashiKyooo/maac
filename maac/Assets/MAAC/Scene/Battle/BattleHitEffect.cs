@@ -30,7 +30,7 @@ public class BattleHitEffect : MonoBehaviour
         var label = go.AddComponent<Text>();
         label.font = _font != null ? _font : Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
         label.fontSize = _fontSize;
-        label.fontStyle = FontStyle.Bold;
+        label.fontStyle = FontStyle.Normal; // フォント自体が Bold
         label.alignment = TextAnchor.MiddleCenter;
         label.horizontalOverflow = HorizontalWrapMode.Overflow;
         label.verticalOverflow = VerticalWrapMode.Overflow;
