@@ -14425,6 +14425,11 @@ MonoBehaviour:
   _groundLayers:
     serializedVersion: 2
     m_Bits: 1
+--- !u!4 &558285735 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+  m_PrefabInstance: {fileID: 558285725}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &560650113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25708,6 +25713,7 @@ GameObject:
   - component: {fileID: 999260984}
   - component: {fileID: 999260982}
   - component: {fileID: 999260981}
+  - component: {fileID: 999260986}
   m_Layer: 5
   m_Name: Panel_2
   m_TagString: Untagged
@@ -25747,10 +25753,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947bc8b25589b455ebe119caa1ba858e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PanelView
-  _onActivatePanelTasks:
-  - {fileID: 0}
+  _onActivatePanelTasks: []
   _proceedConditions:
   - {fileID: 999260982}
+  - {fileID: 999260986}
   _proceedConditionMode: 0
 --- !u!114 &999260982
 MonoBehaviour:
@@ -25802,6 +25808,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999260979}
   m_CullTransparentMesh: 1
+--- !u!114 &999260986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999260979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f42285c0d8c547efb3d988472bbc97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerReachedCondition
+  _target: {fileID: 558285735}
+  _destination: {fileID: 297749283}
+  _radius: 1
+  _ignoreHeight: 1
 --- !u!1001 &999297403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45987,6 +46009,7 @@ GameObject:
   - component: {fileID: 1924483479}
   - component: {fileID: 1924483478}
   - component: {fileID: 1924483477}
+  - component: {fileID: 1924483480}
   m_Layer: 5
   m_Name: Panel_1
   m_TagString: Untagged
@@ -46069,6 +46092,7 @@ MonoBehaviour:
   - {fileID: 1924483479}
   _proceedConditions:
   - {fileID: 1924483478}
+  - {fileID: 1924483480}
   _proceedConditionMode: 0
 --- !u!114 &1924483478
 MonoBehaviour:
@@ -46110,6 +46134,22 @@ MonoBehaviour:
   _waitAdvanceAfterLastMessage: 0
   _advanceActionName: UI/Submit
   _allowSkip: 1
+--- !u!114 &1924483480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924483473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f42285c0d8c547efb3d988472bbc97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerReachedCondition
+  _target: {fileID: 558285735}
+  _destination: {fileID: 2073612207}
+  _radius: 1
+  _ignoreHeight: 1
 --- !u!1001 &1925015202
 PrefabInstance:
   m_ObjectHideFlags: 0
