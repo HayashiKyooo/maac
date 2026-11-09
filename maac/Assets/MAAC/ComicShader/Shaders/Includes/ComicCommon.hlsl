@@ -70,7 +70,9 @@ half ComicToneFromShade(half shade, out half continuous)
     // clamped so that pixel-frequency lighting noise can never turn the steps into a gradient
     float aa = clamp(fwidth(y) * _ToneSmoothness, 1e-5, 0.35);
     level += smoothstep(1.0 - aa, 1.0, frac(y));
-    return (half)saturate(level / (steps - 1.0));
+    half q = (half)saturate(level / (steps - 1.0));
+    // Mid Tone Lightness: lightens the intermediate (gray) steps only; black (0) and white (1) stay.
+    return pow(q, lerp(1.0h, 0.25h, _MidToneLightness));
 }
 
 // ---------------------------------------------------------------- pattern space ---

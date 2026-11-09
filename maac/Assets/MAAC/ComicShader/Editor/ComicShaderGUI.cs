@@ -52,6 +52,7 @@ namespace MAAC.ComicShader.Editor
                 Prop("_ToneSteps");
                 Prop("_ShadowThreshold");
                 Prop("_ToneSmoothness");
+                Prop("_MidToneLightness");
                 Prop("_AmbientStrength");
                 Prop("_AdditionalLightStrength");
                 Prop("_OcclusionStrength");

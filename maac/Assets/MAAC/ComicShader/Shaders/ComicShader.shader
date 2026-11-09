@@ -23,6 +23,7 @@ Shader "Universal Render Pipeline/Comic"
         [IntRange] _ToneSteps("Tone Steps", Range(2, 8)) = 4
         _ShadowThreshold("Shadow Threshold", Range(0, 1.5)) = 0.6
         _ToneSmoothness("Tone Edge Smoothness", Range(0, 4)) = 1.0
+        _MidToneLightness("Mid Tone Lightness", Range(0, 1)) = 0.0
         _AmbientStrength("Ambient Strength", Range(0, 2)) = 1.0
         _AdditionalLightStrength("Additional Light Strength", Range(0, 2)) = 1.0
         _OcclusionStrength("SSAO Strength", Range(0, 1)) = 0.0

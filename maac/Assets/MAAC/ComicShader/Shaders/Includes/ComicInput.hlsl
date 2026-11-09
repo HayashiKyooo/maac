@@ -28,6 +28,7 @@ CBUFFER_START(UnityPerMaterial)
     half   _ToneSteps;
     half   _ShadowThreshold;
     half   _ToneSmoothness;
+    half   _MidToneLightness;
     half   _AmbientStrength;
     half   _AdditionalLightStrength;
     half   _OcclusionStrength;
