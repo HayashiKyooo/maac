@@ -28,6 +28,9 @@ public class PanelView : MonoBehaviour
     [Tooltip("コマが有効でない間に表示するオブジェクト（有効な間は非表示）")]
     [SerializeField] private GameObject _disactivateObject;
 
+    [Tooltip("ON の場合、コマがアクティブになるまでコマ全体を非表示にする（一度表示したら以降は表示したまま）")]
+    [SerializeField] private bool _hideUntilActivated;
+
     [SerializeField] private OnActivatePanelTaskBase[] _onActivatePanelTasks;
 
     [Header("次のコマへ進む条件")]
@@ -58,9 +61,13 @@ public class PanelView : MonoBehaviour
     /// <summary>次のコマへ進んでよくなった時に完了する（何度でも await 可）</summary>
     public UniTask CanProceedTask => _proceedCompletion.Task;
 
+    private CanvasGroup _canvasGroup;
+
     private void Awake()
     {
         SetDisactivateVisible(true);
+        if (_hideUntilActivated)
+            SetPanelVisible(false);
     }
 
     /// <summary>
@@ -77,6 +84,8 @@ public class PanelView : MonoBehaviour
         }
         IsActivated = true;
         SetDisactivateVisible(false);
+        if (_hideUntilActivated)
+            SetPanelVisible(true);
 
         var token = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, destroyCancellationToken).Token;
 
@@ -135,6 +144,16 @@ public class PanelView : MonoBehaviour
             if (task != null)
                 task.OnDeactivate();
         }
+    }
+
+    /// <summary>CanvasGroup でコマ全体（枠・画像・吹き出し）の表示を切り替える。GameObject は有効のまま</summary>
+    private void SetPanelVisible(bool visible)
+    {
+        if (_canvasGroup == null && !TryGetComponent(out _canvasGroup))
+            _canvasGroup = gameObject.AddComponent<CanvasGroup>();
+        _canvasGroup.alpha = visible ? 1f : 0f;
+        _canvasGroup.blocksRaycasts = visible;
+        _canvasGroup.interactable = visible;
     }
 
     private void SetDisactivateVisible(bool visible)

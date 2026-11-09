@@ -2516,6 +2516,7 @@ MonoBehaviour:
   _panelCamera: {fileID: 564756228}
   _blockPlayerInput: 1
   _disactivateObject: {fileID: 524125274}
+  _hideUntilActivated: 1
   _onActivatePanelTasks:
   - {fileID: 93074841}
   - {fileID: 93074835}
@@ -6698,6 +6699,7 @@ MonoBehaviour:
   _panelCamera: {fileID: 2114415639}
   _blockPlayerInput: 1
   _disactivateObject: {fileID: 2056407028}
+  _hideUntilActivated: 0
   _onActivatePanelTasks:
   - {fileID: 254569691}
   - {fileID: 254569688}
@@ -6787,9 +6789,10 @@ MonoBehaviour:
   _animatorToFreeze: {fileID: 558285734}
   _fallAngle: 82
   _duration: 0.45
-  _slideBack: 0.5
+  _slideBack: 0.35
   _bounceAngle: 7
   _bounceDuration: 0.18
+  _keepControllerDisabled: 1
 --- !u!114 &254569686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6806,9 +6809,10 @@ MonoBehaviour:
   _animatorToFreeze: {fileID: 1376409607}
   _fallAngle: 82
   _duration: 0.45
-  _slideBack: 0.5
+  _slideBack: 0.35
   _bounceAngle: 7
   _bounceDuration: 0.18
+  _keepControllerDisabled: 1
 --- !u!114 &254569687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6898,9 +6902,9 @@ MonoBehaviour:
   _targets:
   - {fileID: 1376409608}
   - {fileID: 558285735}
-  _lookOffset: {x: 0, y: 0.8, z: 0}
+  _lookOffset: {x: 0, y: 0.5, z: 0}
   _offsetSpace: 1
-  _offset: {x: 0, y: 0.6, z: 4.2}
+  _offset: {x: 1.4, y: 1.6, z: 8}
   _spaceReference: {fileID: 0}
   _fieldOfView: 40
 --- !u!1001 &255055139
@@ -8098,7 +8102,7 @@ Transform:
   m_GameObject: {fileID: 297749282}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.93, y: -7.6, z: 1.6}
+  m_LocalPosition: {x: 12.93, y: -7.6, z: -6.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24309,6 +24313,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 452202, guid: a31d75f154921304794bf1d122281cac, type: 3}
   m_PrefabInstance: {fileID: 876434390}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &876565458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1494943704304151317, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+  m_PrefabInstance: {fileID: 1376409606}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &887028935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24632,7 +24641,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 36.8
+  field of view: 81.4
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -27203,6 +27212,7 @@ MonoBehaviour:
   _panelCamera: {fileID: 892877269}
   _blockPlayerInput: 0
   _disactivateObject: {fileID: 1634130241}
+  _hideUntilActivated: 0
   _onActivatePanelTasks: []
   _proceedConditions:
   - {fileID: 999260982}
@@ -35918,7 +35928,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1494943704304151317, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1376409610}
   m_SourcePrefab: {fileID: 100100000, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
 --- !u!95 &1376409607 stripped
 Animator:
@@ -35935,6 +35948,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6126411268912980148, guid: 61f14a3f33bc2784c8628e050fde33ce, type: 3}
   m_PrefabInstance: {fileID: 1376409606}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1376409610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876565458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6328307246bd44c7bad63db19d39c5bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StagePlayerAnimationEvents
+  _controller: {fileID: 0}
+  _landingAudioClip: {fileID: 8300000, guid: ff697d3070687ce4583faa0561a145a2, type: 3}
+  _footstepAudioClips:
+  - {fileID: 8300000, guid: 72f526a6a9890f643a88e85a61c86c8a, type: 3}
+  - {fileID: 8300000, guid: 85016e0f2b01da248b9663dd49a161b0, type: 3}
+  - {fileID: 8300000, guid: 186de84b3207156479abe98f4958fed0, type: 3}
+  - {fileID: 8300000, guid: 1a91fcd19acf1e54bba0945d9f390849, type: 3}
+  - {fileID: 8300000, guid: 14e8a8d2158bec840b56c54f5266e692, type: 3}
+  - {fileID: 8300000, guid: 29841e7d5bbfb5b419c9ad16ca8bc4c1, type: 3}
+  - {fileID: 8300000, guid: dd1af302b8902684d9381de1f2d3a5af, type: 3}
+  - {fileID: 8300000, guid: 67c8b33e424ccdc4486edf538ab91c5a, type: 3}
+  - {fileID: 8300000, guid: 274649b0e221539409070ebf6c18918b, type: 3}
+  - {fileID: 8300000, guid: a3194b8bbc96ef84fab1f98f4b7dae3e, type: 3}
+  _footstepAudioVolume: 0.3
 --- !u!1001 &1384372472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39709,7 +39748,7 @@ MonoBehaviour:
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 170
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -48798,6 +48837,7 @@ MonoBehaviour:
   _panelCamera: {fileID: 330585545}
   _blockPlayerInput: 0
   _disactivateObject: {fileID: 898992543}
+  _hideUntilActivated: 0
   _onActivatePanelTasks:
   - {fileID: 1924483479}
   _proceedConditions:
@@ -49796,6 +49836,7 @@ MonoBehaviour:
   _panelCamera: {fileID: 1232415727}
   _blockPlayerInput: 1
   _disactivateObject: {fileID: 1743337275}
+  _hideUntilActivated: 1
   _onActivatePanelTasks:
   - {fileID: 1964533468}
   _proceedConditions:
@@ -52574,6 +52615,7 @@ MonoBehaviour:
   _panelCamera: {fileID: 1816487713}
   _blockPlayerInput: 1
   _disactivateObject: {fileID: 762207412}
+  _hideUntilActivated: 0
   _onActivatePanelTasks:
   - {fileID: 2063592361}
   - {fileID: 2063592364}
@@ -52680,7 +52722,7 @@ MonoBehaviour:
   _legacyText: {fileID: 318465739}
   _hideBalloonUntilActivated: 1
   _messages:
-  - "\u6B21\u306E\u89D2\u3092\u53F3\u306B\u66F2\u304C\u3063\u3066"
+  - "\u3061\u3087\u3063\u3068\u6025\u304C\u306A\u3044\u3068\u3084\u3070\u3044\u304B\uFF1F"
   _charactersPerSecond: 20
   _punctuationWait: 0.15
   _punctuationCharacters: "\u3001\u3002\uFF0C\uFF0E\uFF01\uFF1F!?\u2026"
