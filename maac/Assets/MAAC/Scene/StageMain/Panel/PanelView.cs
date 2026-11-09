@@ -22,6 +22,9 @@ public class PanelView : MonoBehaviour
     [Tooltip("このコマを映すカメラ。コマが有効な間、Player の移動方向はこのカメラの向きが基準になる")]
     [SerializeField] private Camera _panelCamera;
 
+    [Tooltip("このコマが有効な間、ユーザーの操作（移動・ジャンプ）を受け付けない")]
+    [SerializeField] private bool _blockPlayerInput;
+
     [Tooltip("コマが有効でない間に表示するオブジェクト（有効な間は非表示）")]
     [SerializeField] private GameObject _disactivateObject;
 
@@ -36,6 +39,9 @@ public class PanelView : MonoBehaviour
 
     /// <summary>このコマを映すカメラ（未設定なら null）</summary>
     public Camera PanelCamera => _panelCamera;
+
+    /// <summary>このコマが有効な間、ユーザーの操作を受け付けないか</summary>
+    public bool BlocksPlayerInput => _blockPlayerInput;
 
     /// <summary>OnActivateAsync が呼ばれたか</summary>
     public bool IsActivated { get; private set; }

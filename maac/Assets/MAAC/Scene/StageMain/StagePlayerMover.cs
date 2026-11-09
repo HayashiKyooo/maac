@@ -64,6 +64,24 @@ public class StagePlayerMover : MonoBehaviour
 
     public bool IsGrounded { get; private set; } = true;
 
+    private bool _hasOverrideInput;
+    private MoveInput _overrideInput;
+
+    /// <summary>自動移動などで入力を上書き中か</summary>
+    public bool HasOverrideInput => _hasOverrideInput;
+
+    /// <summary>
+    /// Tick に渡される入力の代わりに使う入力を設定する（イベントでの自動移動用）。
+    /// ClearOverrideInput を呼ぶまで有効。
+    /// </summary>
+    public void SetOverrideInput(MoveInput input)
+    {
+        _overrideInput = input;
+        _hasOverrideInput = true;
+    }
+
+    public void ClearOverrideInput() => _hasOverrideInput = false;
+
     private void Awake()
     {
         _controller = GetComponent<CharacterController>();
@@ -79,6 +97,9 @@ public class StagePlayerMover : MonoBehaviour
     /// <summary>1フレーム分の移動を行う（ThirdPersonController.Update と同じ順序）</summary>
     public void Tick(MoveInput input, float deltaTime)
     {
+        if (_hasOverrideInput)
+            input = _overrideInput;
+
         JumpAndGravity(deltaTime);
         GroundedCheck();
         Move(input, deltaTime);

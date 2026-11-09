@@ -17,6 +17,7 @@ public class StageMainPresenter : MonoBehaviour
     [SerializeField] private Transform _cameraTransform;
 
     private Transform _panelCameraTransform;
+    private PanelView _currentPanel;
 
     private InputAction _moveAction;
     private InputAction _jumpAction;
@@ -44,18 +45,22 @@ public class StageMainPresenter : MonoBehaviour
 
     private void OnPanelActivated(int index, PanelView panel)
     {
+        _currentPanel = panel;
         _panelCameraTransform = panel != null && panel.PanelCamera != null ? panel.PanelCamera.transform : null;
     }
 
     private void Update()
     {
-        if (_jumpAction != null && _jumpAction.WasPressedThisFrame())
+        // 現在のコマが操作を禁止している間は入力を渡さない（重力・自動移動のための Tick は続ける）
+        var acceptInput = _currentPanel == null || !_currentPanel.BlocksPlayerInput;
+
+        if (acceptInput && _jumpAction != null && _jumpAction.WasPressedThisFrame())
             _playerMover.RequestJump();
 
         var input = new StagePlayerMover.MoveInput
         {
-            Move = _moveAction.ReadValue<Vector2>(),
-            Sprint = _sprintAction != null && _sprintAction.IsPressed(),
+            Move = acceptInput ? _moveAction.ReadValue<Vector2>() : Vector2.zero,
+            Sprint = acceptInput && _sprintAction != null && _sprintAction.IsPressed(),
             ReferenceYaw = GetCameraYaw(),
         };
         _playerMover.Tick(input, Time.deltaTime);
