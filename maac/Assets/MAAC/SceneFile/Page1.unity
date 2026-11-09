@@ -25328,6 +25328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageMainPresenter
   _playerMover: {fileID: 558285732}
+  _panelManager: {fileID: 569879856}
   _cameraTransform: {fileID: 0}
 --- !u!4 &976330763
 Transform:
@@ -25830,8 +25831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947bc8b25589b455ebe119caa1ba858e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PanelView
+  _panelCamera: {fileID: 892877269}
   _disactivateObject: {fileID: 1634130241}
-  _showDisactivateAfterProceed: 0
   _onActivatePanelTasks: []
   _proceedConditions:
   - {fileID: 999260982}
@@ -46243,8 +46244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947bc8b25589b455ebe119caa1ba858e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PanelView
+  _panelCamera: {fileID: 330585545}
   _disactivateObject: {fileID: 898992543}
-  _showDisactivateAfterProceed: 0
   _onActivatePanelTasks:
   - {fileID: 1924483479}
   _proceedConditions:

@@ -19,6 +19,9 @@ public class PanelView : MonoBehaviour
         Any,
     }
 
+    [Tooltip("このコマを映すカメラ。コマが有効な間、Player の移動方向はこのカメラの向きが基準になる")]
+    [SerializeField] private Camera _panelCamera;
+
     [Tooltip("コマが有効でない間に表示するオブジェクト（有効な間は非表示）")]
     [SerializeField] private GameObject _disactivateObject;
 
@@ -30,6 +33,9 @@ public class PanelView : MonoBehaviour
 
     private readonly UniTaskCompletionSource _activateCompletion = new();
     private readonly UniTaskCompletionSource _proceedCompletion = new();
+
+    /// <summary>このコマを映すカメラ（未設定なら null）</summary>
+    public Camera PanelCamera => _panelCamera;
 
     /// <summary>OnActivateAsync が呼ばれたか</summary>
     public bool IsActivated { get; private set; }
