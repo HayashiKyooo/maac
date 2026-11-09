@@ -29,6 +29,7 @@ Shader "Universal Render Pipeline/Comic"
         _OcclusionStrength("SSAO Strength", Range(0, 1)) = 0.0
         _InkColor("Ink Color", Color) = (0, 0, 0, 1)
         _PaperColor("Paper Color", Color) = (1, 1, 1, 1)
+        _PaperDarkness("Paper Darkness", Range(0, 1)) = 0.0
 
         // ---------------- Pattern space (Halftone + Hatching) ----------------
         [KeywordEnum(Screen, World, Object, UV)] _HalftoneSpace("Halftone Coordinate Mode", Float) = 0

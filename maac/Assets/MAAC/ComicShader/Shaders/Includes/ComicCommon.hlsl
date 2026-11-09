@@ -12,6 +12,12 @@
 
 #define COMIC_REFERENCE_SCREEN_HEIGHT 1080.0
 
+// Paper (lit surface) colour after "Paper Darkness": 0 = Paper Color, 1 = Ink Color.
+half3 ComicPaperColor()
+{
+    return lerp(_PaperColor.rgb, _InkColor.rgb, _PaperDarkness);
+}
+
 // ---------------------------------------------------------------- math helpers ---
 float2 ComicRotate2D(float2 p, float angleDeg)
 {

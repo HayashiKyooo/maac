@@ -13,7 +13,6 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _HALFTONESPACE_SCREEN
-  - _NOISE_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -72,7 +71,7 @@ Material:
     - _InkMottleScale: 80
     - _InkUnevenness: 0.5
     - _MidToneLightness: 0.6
-    - _NoiseEnable: 1
+    - _NoiseEnable: 0
     - _NoiseScale: 1
     - _NoiseStrength: 0.5
     - _OcclusionStrength: 0
@@ -83,6 +82,7 @@ Material:
     - _OutlineReferenceDistance: 8
     - _OutlineWidth: 2.5
     - _OutlineZOffset: 0
+    - _PaperDarkness: 0
     - _PaperGrain: 0.5
     - _PatternUVScale: 128
     - _PatternWorldScale: 100
@@ -92,7 +92,7 @@ Material:
     - _ToneSmoothness: 1
     - _ToneSteps: 3
     m_Colors:
-    - _BaseColor: {r: 0.92, g: 0.92, b: 0.92, a: 1}
+    - _BaseColor: {r: 0.8773585, g: 0.87322, b: 0.87322, a: 1}
     - _HalftoneColor: {r: 0, g: 0, b: 0, a: 1}
     - _InkColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}

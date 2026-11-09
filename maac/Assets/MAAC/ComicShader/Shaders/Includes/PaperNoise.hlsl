@@ -39,7 +39,7 @@ half ComicNoiseCoverageJitter(ComicNoiseSample n)
 half3 ComicApplyPaperNoise(half3 color, ComicNoiseSample n)
 {
     half lumInk = Luminance(_InkColor.rgb);
-    half lumPaper = Luminance(_PaperColor.rgb);
+    half lumPaper = Luminance(ComicPaperColor());
     half inkAmount = 1.0h - saturate((Luminance(color) - lumInk) / max(lumPaper - lumInk, 1e-3h));
 
     // paper grain: slight darkening in paper regions
@@ -50,7 +50,7 @@ half3 ComicApplyPaperNoise(half3 color, ComicNoiseSample n)
     // (inkAmount^2 keeps mid-gray halftone areas clean; mostly solid ink is affected)
     half lift = saturate(n.mottle * 1.3h - 0.3h) * _InkUnevenness * 0.35h * _NoiseStrength
               + n.grain * _InkUnevenness * 0.10h * _NoiseStrength;
-    color = lerp(color, _PaperColor.rgb, saturate(lift) * inkAmount * inkAmount);
+    color = lerp(color, ComicPaperColor(), saturate(lift) * inkAmount * inkAmount);
     return color;
 }
 

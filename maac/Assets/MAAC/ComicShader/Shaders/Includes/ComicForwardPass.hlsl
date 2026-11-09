@@ -180,10 +180,10 @@ void ComicPassFragment(
     // Gray tone levels are printed as screen tone dots; beta stays solid ink.
     half dots = ComicHalftone(pattern, saturate(flatInk * coverageJitter));
     half toneInk = lerp(flatInk, dots, _HalftoneStrength);
-    half3 color = lerp(_PaperColor.rgb, _HalftoneColor.rgb, toneInk);
+    half3 color = lerp(ComicPaperColor(), _HalftoneColor.rgb, toneInk);
     color = lerp(color, _InkColor.rgb, beta);
 #else
-    half3 color = lerp(_PaperColor.rgb, _InkColor.rgb, flatInk);
+    half3 color = lerp(ComicPaperColor(), _InkColor.rgb, flatInk);
 #endif
 
 #if defined(_HATCHING_ON)

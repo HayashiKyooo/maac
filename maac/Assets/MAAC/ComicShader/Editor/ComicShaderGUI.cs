@@ -58,6 +58,7 @@ namespace MAAC.ComicShader.Editor
                 Prop("_OcclusionStrength");
                 Prop("_InkColor");
                 Prop("_PaperColor");
+                Prop("_PaperDarkness", 0, "Paper Darkness (黒度)");
             }
 
             if (Section("Halftone", Styles.halftone, true))

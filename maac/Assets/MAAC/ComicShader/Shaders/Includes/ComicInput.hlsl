@@ -22,6 +22,7 @@ CBUFFER_START(UnityPerMaterial)
     // --- Tone (基本設定) ---
     half4  _InkColor;
     half4  _PaperColor;
+    half   _PaperDarkness;
     half   _Grayscale;
     half   _Contrast;
     half   _Brightness;
