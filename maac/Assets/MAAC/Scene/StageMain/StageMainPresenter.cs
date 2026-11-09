@@ -60,10 +60,22 @@ public class StageMainPresenter : MonoBehaviour
         var input = new StagePlayerMover.MoveInput
         {
             Move = acceptInput ? _moveAction.ReadValue<Vector2>() : Vector2.zero,
-            Sprint = acceptInput && _sprintAction != null && _sprintAction.IsPressed(),
+            Sprint = acceptInput && IsSprintPressed(),
             ReferenceYaw = GetCameraYaw(),
         };
         _playerMover.Tick(input, Time.deltaTime);
+    }
+
+    /// <summary>
+    /// ダッシュ入力。Input Actions の Sprint は左 Shift にしか割り当てられておらず、
+    /// また Button 型のため「押しっぱなしのまま有効になった / フォーカスが戻った」時に反応しないことがある。
+    /// そのためキーボードの Shift（左右どちらでも）の現在の状態も直接見る。
+    /// </summary>
+    private bool IsSprintPressed()
+    {
+        if (_sprintAction != null && _sprintAction.IsPressed()) return true;
+        var keyboard = Keyboard.current;
+        return keyboard != null && keyboard.shiftKey.isPressed;
     }
 
     private float GetCameraYaw()
