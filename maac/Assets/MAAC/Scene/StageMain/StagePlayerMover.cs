@@ -97,6 +97,10 @@ public class StagePlayerMover : MonoBehaviour
     /// <summary>1フレーム分の移動を行う（ThirdPersonController.Update と同じ順序）</summary>
     public void Tick(MoveInput input, float deltaTime)
     {
+        // 演出で CharacterController を止めている間（転倒中など）は動かさない
+        if (!_controller.enabled)
+            return;
+
         if (_hasOverrideInput)
             input = _overrideInput;
 

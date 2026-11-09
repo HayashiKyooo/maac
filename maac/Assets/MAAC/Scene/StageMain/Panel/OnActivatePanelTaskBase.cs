@@ -9,4 +9,9 @@ using UnityEngine;
 public abstract class OnActivatePanelTaskBase : MonoBehaviour
 {
     public abstract UniTask OnActivateAsync(CancellationToken cancellationToken);
+
+    /// <summary>コマが現在のコマでなくなった時に呼ばれる（必要なタスクだけ override）</summary>
+    public virtual void OnDeactivate()
+    {
+    }
 }

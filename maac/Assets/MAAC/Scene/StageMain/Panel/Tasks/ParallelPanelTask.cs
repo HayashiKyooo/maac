@@ -25,4 +25,14 @@ public class ParallelPanelTask : OnActivatePanelTaskBase
         }
         return UniTask.WhenAll(running);
     }
+
+    public override void OnDeactivate()
+    {
+        if (_tasks == null) return;
+        foreach (var task in _tasks)
+        {
+            if (task != null && task != this)
+                task.OnDeactivate();
+        }
+    }
 }

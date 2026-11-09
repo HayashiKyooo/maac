@@ -129,6 +129,12 @@ public class PanelView : MonoBehaviour
     public void Deactivate()
     {
         SetDisactivateVisible(true);
+        if (_onActivatePanelTasks == null) return;
+        foreach (var task in _onActivatePanelTasks)
+        {
+            if (task != null)
+                task.OnDeactivate();
+        }
     }
 
     private void SetDisactivateVisible(bool visible)
